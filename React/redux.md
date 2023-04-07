@@ -19,3 +19,10 @@
  payload: ''
 }
 ```
+## Explain the flow of redux.
+1. The application state is stored in a single object called the store. The store is created by combining multiple reducers, which are pure functions that take the current state and an action as input and return a new state.
+2. To update the state, an action is dispatched to the store. An action is a plain JavaScript object that has a type property and optionally other data that can be used to update the state.
+3. The store calls the appropriate reducer based on the action's type property, and passes the current state and the action as input.
+4. The reducer returns a new state based on the current state and the action.
+5. The store updates its state with the new state returned by the reducer, and notifies all subscribers that the state has changed.
+6. The subscribers, typically components in a React application, can access the new state from the store and re-render the user interface based on the new data.
