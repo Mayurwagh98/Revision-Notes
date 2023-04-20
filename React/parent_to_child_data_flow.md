@@ -1,3 +1,4 @@
+```
 // Parent component
 import React from 'react';
 import ChildComponent from './ChildComponent';
@@ -23,3 +24,4 @@ function ChildComponent(props) {
 }
 
 export default ChildComponent;
+```
