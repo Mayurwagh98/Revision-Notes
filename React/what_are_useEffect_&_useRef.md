@@ -12,21 +12,24 @@
 3. useRef returns a mutable ref object with a current property that can be used to store and access the mutable value.
 4. The `current` property can be updated without triggering a re-render of the component.
 ```
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from "react";
 
-function InputComponent() {
+export default function App() {
   const inputRef = useRef(null);
+  let [inputvalue, setInpuTvalue] = useState("");
 
   const handleButtonClick = () => {
     // Access input value using ref
-    console.log('Input value:', inputRef.current.value);
+    setInpuTvalue(inputRef.current.value);
+    // console.log("Input value:", );
   };
-
   return (
-    <div>
+    <>
       <input ref={inputRef} type="text" />
       <button onClick={handleButtonClick}>Get Input Value</button>
-    </div>
+      <h1>{inputvalue}</h1>
+    </>
   );
 }
+
 ```
