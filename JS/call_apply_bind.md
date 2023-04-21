@@ -49,3 +49,44 @@ Or
 displayDetails.call(car, "Vivian"); // Vivian, this is your car: GA12345 Toyota
 ```
 Note that when using the apply() function the parameter must be placed in an array. Call() accepts both an array of parameters and a parameter itself. Both are great tools for borrowing functions in JavaScript.
+
+-----------------
+
+call: The call() method allows you to invoke a function with a specific this value and arguments passed individually.
+
+Syntax: function.call(thisArg, arg1, arg2, ...)
+```
+function greet() {
+  console.log(`Hello, ${this.name}`);
+}
+
+const person = { name: "John" };
+
+greet.call(person); // output: Hello, John
+```
+apply: The apply() method is similar to call(), but it accepts arguments as an array.
+
+Syntax: function.apply(thisArg, [argsArray])
+```
+function greet(greeting) {
+  console.log(`${greeting}, ${this.name}`);
+}
+
+const person = { name: "John" };
+
+greet.apply(person, ["Hello"]); // output: Hello, John
+```
+bind: The bind() method returns a new function with a specific this value and any arguments passed to it.
+
+Syntax: function.bind(thisArg[, arg1[, arg2[, ...]]])
+```
+function greet(greeting) {
+  console.log(`${greeting}, ${this.name}`);
+}
+
+const person = { name: "John" };
+
+const greetPerson = greet.bind(person);
+
+greetPerson("Hello"); // output: Hello, John
+```
