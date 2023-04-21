@@ -12,5 +12,5 @@ function myFunction() {
 }
 </script>
 ```
-5. In this example, the onscroll event is added to a <div> element, and the myFunction() function is executed when the user scrolls the contents of the <div>. When the myFunction() function is executed, a message is logged to the console indicating that the user has scrolled the contents of the <div>.
+5. In this example, the onscroll event is added to a <div> element, and the myFunction() function is executed when the user scrolls the contents of the `<div>`. When the myFunction() function is executed, a message is logged to the console indicating that the user has scrolled the contents of the <div>.
 6. The scroll event is commonly used in web development to create dynamic and interactive user interfaces that respond to scrolling behavior, such as infinite scrolling, lazy loading of content, or fixed-position elements that stay visible as the user scrolls.
