@@ -1,0 +1,13 @@
+1. justify-content, justify-items, and justify-self are three CSS properties that are used in the context of CSS Grid and CSS Flexbox layouts to control the horizontal positioning of items within a container.
+2. justify-content: This property is used to align items along the horizontal axis in a flex container. It specifies how the remaining free space of the container should be distributed between and around the flex items. The available values are flex-start, flex-end, center, space-between, space-around, and space-evenly.
+3. justify-items: This property is used to align items within a grid cell in a CSS Grid layout. It sets the default horizontal position of the grid items within their cells. The available values are start, end, center, and stretch.
+4. justify-self: This property is used to align a grid item along the horizontal axis within its grid cell. It overrides the value of justify-items for the specific grid item. The available values are the same as justify-items: start, end, center, and stretch.
+5. n summary, justify-content is used in a flex container to align flex items horizontally, while justify-items and justify-self are used in a CSS Grid layout to align grid items within their cells along the horizontal axis.
+
+### What do AlignItems, AlignContent, and AlignSelf mean?
+
+1. align-items, align-content, and align-self are three CSS properties used in the context of CSS Grid and CSS Flexbox layouts to control the vertical positioning of items within a container.
+2. align-items: This property is used to align items along the vertical axis in a flex container. It specifies how the items should be positioned within the container. The available values are stretch, flex-start, flex-end, center, and baseline.
+3. align-content: This property is used to align the rows of a grid layout along the vertical axis. It specifies how the free space of a grid container should be distributed vertically between and around the rows. The available values are stretch, flex-start, flex-end, center, space-between, space-around, and space-evenly.
+4. align-self: This property is used to align a single grid or flex item vertically within its container. It overrides the value of align-items or align-content for the specific item. The available values are the same as align-items: stretch, flex-start, flex-end, center, and baseline.
+5. In summary, align-items is used in a flex container to align flex items vertically, while align-content is used in a grid container to align rows along the vertical axis. align-self is used in both flex and grid layouts to align a single item vertically within its container.
