@@ -1,0 +1,5 @@
+1. `Local Storage`: This is a key-value store that allows web applications to store data on the user's computer without an expiration date. Local storage is persistent, meaning the data is not deleted even after the user closes the web application or turns off their computer.
+2. `Session Storage`: This is similar to local storage, but the data stored is deleted when the session ends, i.e., when the user closes the web application or the browser.
+3. `IndexedDB`: IndexedDB is a low-level API that provides an object-oriented database for storing structured data. It allows web applications to store and retrieve large amounts of data on the client-side.
+4. `Web SQL Database`: This is a deprecated API that provided a client-side SQL database for storing structured data. It is no longer supported by most browsers.
+5. `Cookies`: Cookies are small text files that are stored on the user's computer by the web server. They can be used to store user preferences, login information, and other data. However, cookies have limitations, such as a size limit and expiration date, and are not considered a secure method for storing sensitive data.
