@@ -21,4 +21,3 @@
 console.log(name); // Error: name is not defined
 ```
 5. In the above example, the IIFE creates a local scope with the variable name and the function sayHello(). These are not accessible from outside the IIFE. The IIFE is immediately invoked, resulting in the output "Hello, John!" being logged to the console. When trying to access name outside the IIFE, it throws an error because the variable is not defined in the outer scope.
-6. 
