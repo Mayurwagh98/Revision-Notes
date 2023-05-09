@@ -30,4 +30,20 @@ function compute(callBack, x, y){
 console.log(compute(divide, 10, 5))    // 2
 console.log(compute(multiply, 10, 5))` // 50
 ```
+```
+function modifyArray(arr, callback) {
+  // do something to arr here
+  arr.push(100);
+  // then execute the callback function that was passed
+  callback();
+}
+
+var arr = [1, 2, 3, 4, 5];
+
+modifyArray(arr, function() {
+  console.log("array has been modified", arr);
+});
+```
+
 The most common examples of callback functions in JavaScript are addEventListener, array functions (filter, map, reduce) etc.
+
