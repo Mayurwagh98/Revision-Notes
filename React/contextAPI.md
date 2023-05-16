@@ -53,3 +53,70 @@ const Content = () => {
   );
 };
 ```
+### Counter
+```
+import React, { createContext, useContext, useState } from 'react';
+
+// Step 1: Create a context
+const CounterContext = createContext();
+
+// Step 2: Create a provider component
+function CounterProvider({ children }) {
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    setCount(prevCount => prevCount + 1);
+  };
+
+  const decrement = () => {
+    setCount(prevCount => prevCount - 1);
+  };
+
+  const value = {
+    count,
+    increment,
+    decrement
+  };
+
+  return (
+    <CounterContext.Provider value={value}>
+      {children}
+    </CounterContext.Provider>
+  );
+}
+
+// Step 3: Create custom hooks to access the context
+function useCounter() {
+  return useContext(CounterContext);
+}
+
+// Step 4: Use the counter in components
+function CounterDisplay() {
+  const { count } = useCounter();
+
+  return <div>Count: {count}</div>;
+}
+
+function CounterButtons() {
+  const { increment, decrement } = useCounter();
+
+  return (
+    <div>
+      <button onClick={increment}>Increment</button>
+      <button onClick={decrement}>Decrement</button>
+    </div>
+  );
+}
+
+// Step 5: Use the provider component at the top level of your app
+function App() {
+  return (
+    <CounterProvider>
+      <CounterDisplay />
+      <CounterButtons />
+    </CounterProvider>
+  );
+}
+
+export default App;
+```
